@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Wall" format=3 uid="uid://cod0j3c3f4wdb"]
+
+[ext_resource type="Script" uid="uid://bs2okq027oxrc" path="res://scripts/res/wallType.gd" id="1_s35ql"]
+
+[resource]
+script = ExtResource("1_s35ql")
+metadata/_custom_type_script = "uid://bs2okq027oxrc"
