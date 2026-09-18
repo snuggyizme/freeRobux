@@ -5,7 +5,7 @@ class_name ChunkData extends Resource
 # +1 ore
 # +0 floor
 # -1 subfloor
-@export var blocks: Dictionary[Vector3, StringName]
+@export var blocks: Dictionary[Vector3i, StringName]
 
 func _init(cx: int, cy: int) -> void:
 	var worldController: WorldController = Global.worldController
@@ -32,16 +32,26 @@ func _init(cx: int, cy: int) -> void:
 			var wallValue: float = remap(
 				terrainNoise.get_noise_2dv(coord), -1, 1, 0, 1
 			)
+			
+			var wallCoord := Vector3i(x, y, 2)
+			
+			if blocks.get(wallCoord) == &"_ref_skip":
+					continue
+			
 			if wallValue > 0.5:
 				if biome == null:
-					blocks[Vector3(x, y, 2)] = &"_errorBiome"
+					blocks[wallCoord] = &"_errorBiome"
+					continue
 				
 				var wallPicked: StringName = biome.walls.pick_random()
+				var wallResource: Wall = Blocks.types.get(wallPicked)
 				
-				#TODO some logic about walls that arent 1x1, add WallRefs into
-				#blocks dict and then skip if a wallref is arleady here?
+				for i: Vector2i in wallResource.shapeRaw:
+					blocks[Vector3i(x + i.x, y + i.y, 2)] = &"_ref_skip"
 				
-				blocks[Vector3(x, y, 2)] = wallPicked
+				blocks[wallCoord] = wallPicked
+			else:
+				blocks[wallCoord] = &"_"
 
 #                                             <  0 to 1  >
 func matchBiome(world: WorldController.World, value: float) -> Biome:

@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="Biome" format=3 uid="uid://dt2lbxcjj5hj7"]
 
-[ext_resource type="Script" uid="uid://dp4v6p50gp4yx" path="res://scripts/res/biome.gd" id="2_36o74"]
+[ext_resource type="Script" uid="uid://dp4v6p50gp4yx" path="res://scripts/res/biome.gd" id="1_xu350"]
 
 [resource]
-script = ExtResource("2_36o74")
+script = ExtResource("1_xu350")
 walls = Array[StringName]([&"_happyLeaving"])
 metadata/_custom_type_script = "uid://dp4v6p50gp4yx"

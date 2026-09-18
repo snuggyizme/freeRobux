@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="WallType" format=3 uid="uid://bdcpo0eurxodf"]
 
-[ext_resource type="Script" uid="uid://bs2okq027oxrc" path="res://scripts/res/wallType.gd" id="1_kd18s"]
+[ext_resource type="Script" uid="uid://bs2okq027oxrc" path="res://scripts/res/wall.gd" id="1_kd18s"]
+
 
 [resource]
 script = ExtResource("1_kd18s")

@@ -9,11 +9,19 @@ const CHUNK_SCENE = preload("res://scenes/chunk.tscn")
 @export var noiseBox: NoiseBox
 @export var currentWorld: World
 
+var seed: int = -1
 var biomes: Dictionary[StringName, Biome]
 var chunkDatas: Dictionary[Vector2i, ChunkData]
 
 func _ready() -> void:
 	Global.worldController = self
+	
+	if seed == -1:
+		randomize()
+		seed = randi()
+		
+		seed(seed)
+		noiseBox.rand(seed)
 	
 	# Setting worlds
 	biomes = {
@@ -25,6 +33,12 @@ func _ready() -> void:
 	}
 	
 	generate()
+	
+	for chunkCoord: Vector2i in chunkDatas.keys():
+		var chunk: Chunk = CHUNK_SCENE.instantiate()
+		chunk.chunkCoord = chunkCoord
+		chunk.update()
+		add_child(chunk)
 
 func generate() -> void:
 	for x: int in range(worldSize.x):

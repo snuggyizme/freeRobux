@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://ci57stfl7f7ew"]
+
+[ext_resource type="PackedScene" uid="uid://c202nfibbalih" path="res://scenes/worldController.tscn" id="1_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://bmt70e16a6gk2" path="res://scenes/playerCharacter.tscn" id="2_lnu2h"]
+
+[node name="Game" type="Node2D" unique_id=328377601]
+
+[node name="WorldController" parent="." unique_id=878640916 instance=ExtResource("1_yqjtg")]
+
+[node name="PlayerCharacter" parent="." unique_id=752652064 instance=ExtResource("2_lnu2h")]
+position = Vector2(130, 92)
