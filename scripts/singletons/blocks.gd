@@ -14,6 +14,9 @@ const types: Dictionary[StringName, Wall] = {
 	&"_sadArrival":
 		preload("res://blocks/walls/_sadArrival.tres"),
 	
+	&"_theHappiestDeparture":
+		preload("res://blocks/walls/_theHappiestDeparture.tres"),
+	
 	# ###### #
 	# Errors #
 	# ###### #
@@ -24,6 +27,6 @@ const types: Dictionary[StringName, Wall] = {
 	&"_errorNoBlock":
 		preload("res://blocks/walls/_errorNoBlock.tres"),
 	
-	&"_theHappiestDeparture":
-		preload("res://blocks/walls/__theHappiestDeparture.tres"),
+	&"_errorNoFallback1x1":
+		preload("res://blocks/walls/_errorNoFallback1x1.tres"),
 }

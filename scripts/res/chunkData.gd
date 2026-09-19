@@ -28,7 +28,6 @@ func _init(cx: int, cy: int) -> void:
 			)
 			var biome: Biome = matchBiome(worldController.currentWorld, biomeValue)
 			
-			# Is it a wall
 			var wallValue: float = remap(
 				terrainNoise.get_noise_2dv(coord), -1, 1, 0, 1
 			)
@@ -36,7 +35,7 @@ func _init(cx: int, cy: int) -> void:
 			var wallCoord := Vector3i(x, y, 2)
 			
 			if blocks.get(wallCoord) == &"_ref_skip":
-					continue
+				continue
 			
 			if wallValue > 0.5:
 				if biome == null:
@@ -45,6 +44,22 @@ func _init(cx: int, cy: int) -> void:
 				
 				var wallPicked: StringName = biome.walls.pick_random()
 				var wallResource: Wall = Blocks.types.get(wallPicked)
+				
+				var fine: bool = true
+				for i: Vector2i in wallResource.shapeRaw:
+					if blocks.has(Vector3i(x + i.x, y + i.y, 2)):
+						fine = false
+						break
+				
+				if not fine:
+					if biome.fallback1x1WallIndices.size() < 1:
+						blocks[wallCoord] = &"_errorNoFallback1x1"
+						continue
+					
+					blocks[wallCoord] = biome.walls[
+						biome.fallback1x1WallIndices.pick_random()
+					]
+					continue
 				
 				for i: Vector2i in wallResource.shapeRaw:
 					blocks[Vector3i(x + i.x, y + i.y, 2)] = &"_ref_skip"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Wall" format=3 uid="uid://il6y028hklhv"]
+
+[ext_resource type="Script" uid="uid://bs2okq027oxrc" path="res://scripts/res/wall.gd" id="1_d6qjk"]
+
+[resource]
+script = ExtResource("1_d6qjk")
+displayName = "???"
+description = "No fallback 1x1s found for current biome"
+atlasCoord = Vector2i(1, 4)
+metadata/_custom_type_script = "uid://bs2okq027oxrc"

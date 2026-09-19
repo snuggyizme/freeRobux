@@ -5,4 +5,5 @@
 [resource]
 script = ExtResource("1_xu350")
 walls = Array[StringName]([&"_happyLeaving", &"_theHappiestDeparture"])
+fallback1x1WallIndices = Array[int]([0])
 metadata/_custom_type_script = "uid://dp4v6p50gp4yx"
