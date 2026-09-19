@@ -1,12 +1,10 @@
-[gd_resource type="Resource" script_class="WallType" format=3 uid="uid://cod0j3c3f4wdb"]
+[gd_resource type="Resource" script_class="Wall" format=3 uid="uid://cod0j3c3f4wdb"]
 
 [ext_resource type="Script" uid="uid://bs2okq027oxrc" path="res://scripts/res/wall.gd" id="1_s35ql"]
-
 
 [resource]
 script = ExtResource("1_s35ql")
 displayName = "Happy Leaving"
 description = "Sir"
-size = Vector2i(1, 1)
 atlasCoord = Vector2i(0, 1)
 metadata/_custom_type_script = "uid://bs2okq027oxrc"

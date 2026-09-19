@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Wall" format=3 uid="uid://4o52emhxp68w"]
+
+[ext_resource type="Script" uid="uid://bs2okq027oxrc" path="res://scripts/res/wall.gd" id="1_5w2x8"]
+
+[resource]
+script = ExtResource("1_5w2x8")
+displayName = "The Happiest Departure"
+description = "Backflip on iPhone 2"
+shape = 1
+atlasCoord = Vector2i(0, 5)
+metadata/_custom_type_script = "uid://bs2okq027oxrc"

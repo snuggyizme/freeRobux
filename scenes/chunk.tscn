@@ -2,7 +2,12 @@
 
 [ext_resource type="Script" uid="uid://3u64rj1s40ha" path="res://scripts/chunk.gd" id="1_jas4a"]
 [ext_resource type="TileSet" uid="uid://cnmb3fvkvso2o" path="res://tilesets/wallSet.tres" id="1_jtw3q"]
+[ext_resource type="Texture2D" uid="uid://bd2pcoplj4xc4" path="res://assets/sprites/test/chunk.png" id="3_c3gog"]
 
 [node name="Chunk" type="TileMapLayer" unique_id=1744753174]
 tile_set = ExtResource("1_jtw3q")
 script = ExtResource("1_jas4a")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1777708883]
+position = Vector2(128, 128)
+texture = ExtResource("3_c3gog")

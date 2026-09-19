@@ -1,12 +1,7 @@
-[gd_resource type="Resource" script_class="WallType" format=3 uid="uid://cbj83opk1e0mn"]
+[gd_resource type="Resource" script_class="Wall" format=3 uid="uid://cbj83opk1e0mn"]
 
 [ext_resource type="Script" uid="uid://bs2okq027oxrc" path="res://scripts/res/wall.gd" id="1_qc6bq"]
 
-
 [resource]
 script = ExtResource("1_qc6bq")
-displayName = "Sad Arrival"
-description = "1000 Pelicans"
-size = Vector2i(1, 1)
-atlasCoord = Vector2i(0, 2)
 metadata/_custom_type_script = "uid://bt1igfo5u77lc"

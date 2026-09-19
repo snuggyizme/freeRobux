@@ -32,7 +32,7 @@ const SHAPES: Dictionary[Shape, Array] = {
 		shape = x
 @export var atlasCoord: Vector2i
 
-var shapeRaw: Array[Vector2i]
+var shapeRaw: Array
 
 func getAtlasCoord() -> Vector2i:
 	return atlasCoord

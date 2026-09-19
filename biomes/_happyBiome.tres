@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_xu350")
-walls = Array[StringName]([&"_happyLeaving"])
+walls = Array[StringName]([&"_happyLeaving", &"_theHappiestDeparture"])
 metadata/_custom_type_script = "uid://dp4v6p50gp4yx"

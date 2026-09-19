@@ -21,6 +21,6 @@ metadata/_custom_type_script = "uid://midfpddrn1n4"
 
 [node name="WorldController" type="Node2D" unique_id=878640916]
 script = ExtResource("1_vo4mf")
-worldSize = Vector2i(2, 2)
-chunkSize = Vector2i(4, 4)
+worldSize = Vector2i(8, 8)
+chunkSize = Vector2i(16, 16)
 noiseBox = SubResource("Resource_vo4mf")

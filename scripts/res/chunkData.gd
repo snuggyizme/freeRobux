@@ -61,7 +61,7 @@ func matchBiome(world: WorldController.World, value: float) -> Biome:
 		# Testing world
 		# =============
 		WorldController.World.FACE_LAND:
-			if value > 0.0:
+			if value > 0.5:
 				return biomes[&"happyBiome"]
 			return biomes[&"sadBiome"]
 	

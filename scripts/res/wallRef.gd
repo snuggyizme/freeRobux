@@ -1,4 +1,8 @@
-class_name WallRef extends RefCounted
+class_name WallRef extends RuntimeWall
 
-@export var root: Vector2i ## Global position
-@export var localPos: Vector2i ## Own local position from root position.
+var root: Vector2i ## Root's global position
+var localPos: Vector2i ## Own local position from root position.
+
+func _init(rp: Vector2i, lp: Vector2i) -> void:
+	root = rp
+	localPos = lp

@@ -23,4 +23,7 @@ const types: Dictionary[StringName, Wall] = {
 	
 	&"_errorNoBlock":
 		preload("res://blocks/walls/_errorNoBlock.tres"),
+	
+	&"_theHappiestDeparture":
+		preload("res://blocks/walls/__theHappiestDeparture.tres"),
 }
