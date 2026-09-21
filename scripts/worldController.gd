@@ -23,6 +23,8 @@ func _ready() -> void:
 		&"sad":
 			preload("res://biomes/sadBiome.tres")
 	}
+	
+	generate()
 
 func generate() -> void:
 	for x: int in range(worldSize.x):

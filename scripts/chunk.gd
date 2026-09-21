@@ -19,3 +19,5 @@ func update() -> void:
 				0,
 				wall.getAtlasCoord(),
 			)
+			
+			print("A chunk set a cell")
