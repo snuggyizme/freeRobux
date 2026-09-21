@@ -1,3 +1,6 @@
 [gd_scene format=3 uid="uid://c202nfibbalih"]
 
+[ext_resource type="Script" uid="uid://pms8ing2tboy" path="res://scripts/worldController.gd" id="1_vo4mf"]
+
 [node name="WorldController" type="Node2D" unique_id=878640916]
+script = ExtResource("1_vo4mf")

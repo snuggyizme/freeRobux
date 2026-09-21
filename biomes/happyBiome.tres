@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Biome" format=3 uid="uid://dt2lbxcjj5hj7"]
+
+[ext_resource type="Script" uid="uid://bt1igfo5u77lc" path="res://scripts/res/block.gd" id="1_vm33p"]
+[ext_resource type="Script" uid="uid://dp4v6p50gp4yx" path="res://scripts/res/biome.gd" id="2_36o74"]
+[ext_resource type="Script" uid="uid://bs2okq027oxrc" path="res://scripts/res/wallType.gd" id="3_poqwl"]
+[ext_resource type="Resource" uid="uid://cod0j3c3f4wdb" path="res://blocks/walls/_happyLeaving.tres" id="4_36o74"]
+
+[resource]
+script = ExtResource("2_36o74")
+walls = Array[ExtResource("3_poqwl")]([ExtResource("4_36o74")])
+metadata/_custom_type_script = "uid://dp4v6p50gp4yx"

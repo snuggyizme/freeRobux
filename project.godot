@@ -17,6 +17,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Blocks="*uid://5rl23bsfahcd"
+Global="*uid://blbd71kt2u6s0"
 
 [display]
 
