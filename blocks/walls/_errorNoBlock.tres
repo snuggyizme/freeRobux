@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="WallType" format=3 uid="uid://cfd7muo0qwxlh"]
+
+[ext_resource type="Script" uid="uid://bs2okq027oxrc" path="res://scripts/res/wallType.gd" id="1_aing0"]
+
+[resource]
+script = ExtResource("1_aing0")
+displayName = "???"
+description = "Couldn't find a block with that name!"
+metadata/_custom_type_script = "uid://bs2okq027oxrc"
