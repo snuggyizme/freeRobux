@@ -19,5 +19,8 @@ const types: Dictionary[StringName, Wall] = {
 	# ###### #
 	
 	&"_errorBiome":
-		preload("res://blocks/walls/_errorBiome.tres")
+		preload("res://blocks/walls/_errorBiome.tres"),
+	
+	&"_errorNoBlock":
+		preload("res://blocks/walls/_errorNoBlock.tres"),
 }

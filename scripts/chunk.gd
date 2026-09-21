@@ -11,7 +11,7 @@ func update() -> void:
 			
 			var wall: Wall = Blocks.types.get(
 				worldController.chunkDatas[chunkCoord].blocks[Vector3(x, y, 2)],
-				
+				Blocks.types[&"_errorNoBlock"]
 			)
 			
 			set_cell(
