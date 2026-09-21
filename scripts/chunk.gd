@@ -17,5 +17,5 @@ func update() -> void:
 			set_cell(
 				coord,
 				0,
-				
+				wall.getAtlasCoord(),
 			)
