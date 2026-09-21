@@ -4,4 +4,4 @@ class_name WallType extends Wall
 @export var displayName: String
 @export var description: String
 @export var size: Vector2i
-@export var texture: Texture2D
+@export var atlasCoord: Vector2i

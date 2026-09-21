@@ -5,7 +5,7 @@ class_name ChunkData extends Resource
 # +1 ore
 # +0 floor
 # -1 subfloor
-@export var blocks: Dictionary[Vector3, Block]
+@export var blocks: Dictionary[Vector3, StringName]
 
 func _init(cx: int, cy: int) -> void:
 	var worldController: WorldController = Global.worldController
@@ -33,9 +33,13 @@ func _init(cx: int, cy: int) -> void:
 				terrainNoise.get_noise_2dv(coord), -1, 1, 0, 1
 			)
 			if wallValue > 0.5:
-				var wallPicked: Wall = biome.walls.pick_random()
+				if biome == null:
+					blocks[Vector3(x, y, 2)] = &"_errorBiome"
 				
-				#TODO some logic about walls that arent 1x1
+				var wallPicked: StringName = biome.walls.pick_random()
+				
+				#TODO some logic about walls that arent 1x1, add WallRefs into
+				#blocks dict and then skip if a wallref is arleady here?
 				
 				blocks[Vector3(x, y, 2)] = wallPicked
 

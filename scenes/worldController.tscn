@@ -1,6 +1,26 @@
 [gd_scene format=3 uid="uid://c202nfibbalih"]
 
 [ext_resource type="Script" uid="uid://pms8ing2tboy" path="res://scripts/worldController.gd" id="1_vo4mf"]
+[ext_resource type="Script" uid="uid://midfpddrn1n4" path="res://scripts/res/noiseBox.gd" id="2_xg8kd"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_xg8kd"]
+noise_type = 4
+seed = 85
+frequency = 0.0117
+offset = Vector3(0, 1000, 0)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_iye1u"]
+domain_warp_enabled = true
+domain_warp_fractal_gain = -0.37
+
+[sub_resource type="Resource" id="Resource_vo4mf"]
+script = ExtResource("2_xg8kd")
+terrainNoise = SubResource("FastNoiseLite_iye1u")
+biomeNoise = SubResource("FastNoiseLite_xg8kd")
+metadata/_custom_type_script = "uid://midfpddrn1n4"
 
 [node name="WorldController" type="Node2D" unique_id=878640916]
 script = ExtResource("1_vo4mf")
+worldSize = Vector2i(2, 2)
+chunkSize = Vector2i(4, 4)
+noiseBox = SubResource("Resource_vo4mf")

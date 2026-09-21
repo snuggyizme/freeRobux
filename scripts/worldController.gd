@@ -10,6 +10,7 @@ const CHUNK_SCENE = preload("res://scenes/chunk.tscn")
 @export var currentWorld: World
 
 var biomes: Dictionary[StringName, Biome]
+var chunkDatas: Dictionary[Vector2i, ChunkData]
 
 func _ready() -> void:
 	Global.worldController = self
@@ -26,4 +27,5 @@ func _ready() -> void:
 func generate() -> void:
 	for x: int in range(worldSize.x):
 		for y: int in range(worldSize.y):
-			var _chunkData := ChunkData.new(x, y)
+			var chunkData := ChunkData.new(x, y)
+			chunkDatas[Vector2i(x, y)] = chunkData
