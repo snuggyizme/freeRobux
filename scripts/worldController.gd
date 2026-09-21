@@ -17,10 +17,10 @@ func _ready() -> void:
 	
 	# Setting worlds
 	biomes = {
-		&"happy":
+		&"happyBiome":
 			preload("res://biomes/happyBiome.tres"),
 		
-		&"sad":
+		&"sadBiome":
 			preload("res://biomes/sadBiome.tres")
 	}
 	
